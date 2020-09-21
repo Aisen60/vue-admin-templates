@@ -1,8 +1,5 @@
 /**
- * Created by PanJiaChen on 16/11/18.
- */
-
-/**
+ * 是否是外部链接
  * @param {string} path
  * @returns {Boolean}
  */
@@ -11,15 +8,7 @@ export function isExternal(path) {
 }
 
 /**
- * @param {string} str
- * @returns {Boolean}
- */
-export function validUsername(str) {
-  const valid_map = ['admin', 'editor']
-  return valid_map.indexOf(str.trim()) >= 0
-}
-
-/**
+ * 是否是有效的链接
  * @param {string} url
  * @returns {Boolean}
  */
@@ -29,10 +18,12 @@ export function validURL(url) {
 }
 
 /**
+ * 字符串是否是全小写
  * @param {string} str
  * @returns {Boolean}
  */
 export function validLowerCase(str) {
+  if (str === undefined || str === null) return false
   const reg = /^[a-z]+$/
   return reg.test(str)
 }
@@ -42,6 +33,7 @@ export function validLowerCase(str) {
  * @returns {Boolean}
  */
 export function validUpperCase(str) {
+  if (str === undefined || str === null) return false
   const reg = /^[A-Z]+$/
   return reg.test(str)
 }

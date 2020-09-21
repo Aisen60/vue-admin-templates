@@ -2,14 +2,12 @@
   <div class="app-container">
 
     <div>
-      <FilenameOption v-model="filename" />
-      <AutoWidthOption v-model="autoWidth" />
       <BookTypeOption v-model="bookType" />
       <el-button :loading="downloadLoading" style="margin:0 0 20px 20px;" type="primary" icon="el-icon-document" @click="handleDownload">
-        Export Excel
+        导出
       </el-button>
-      <a href="https://panjiachen.github.io/vue-element-admin-site/feature/component/excel.html" target="_blank" style="margin-left:15px;">
-        <el-tag type="info">Documentation</el-tag>
+      <a href="https://panjiachen.github.io/vue-element-admin-site/zh/feature/component/excel.html#excel-%E5%AF%BC%E5%87%BA" target="_blank" style="margin-left:15px;">
+        <el-tag type="info">文档</el-tag>
       </a>
     </div>
 
@@ -48,13 +46,11 @@
 import { fetchList } from '@/api/article'
 import { parseTime } from '@/utils'
 // options components
-import FilenameOption from './components/FilenameOption'
-import AutoWidthOption from './components/AutoWidthOption'
 import BookTypeOption from './components/BookTypeOption'
 
 export default {
   name: 'ExportExcel',
-  components: { FilenameOption, AutoWidthOption, BookTypeOption },
+  components: { BookTypeOption },
   data() {
     return {
       list: null,
@@ -106,11 +102,3 @@ export default {
 }
 </script>
 
-<style>
-.radio-label {
-  font-size: 14px;
-  color: #606266;
-  line-height: 40px;
-  padding: 0 12px 0 30px;
-}
-</style>

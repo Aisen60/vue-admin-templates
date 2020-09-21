@@ -13,7 +13,6 @@
 </template>
 
 <script>
-import { addClass, removeClass } from '@/utils'
 
 export default {
   name: 'RightPanel',
@@ -38,16 +37,11 @@ export default {
     }
   },
   watch: {
-    show(value) {
-      if (value && !this.clickNotClose) {
-        this.addEventClick()
-      }
-      if (value) {
-        addClass(document.body, 'showRightPanel')
-      } else {
-        removeClass(document.body, 'showRightPanel')
-      }
-    }
+    // show(value) {
+    //   if (value && !this.clickNotClose) {
+    //     this.addEventClick()
+    //   }
+    // }
   },
   mounted() {
     this.insertToBody()

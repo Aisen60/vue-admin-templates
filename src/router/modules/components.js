@@ -12,7 +12,6 @@ const componentsRouter = {
     icon: 'component'
   },
   children: [
-
     {
       path: 'back-to-top',
       component: () => import('@/views/components-demo/back-to-top'),
